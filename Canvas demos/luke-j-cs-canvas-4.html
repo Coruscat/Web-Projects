@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>First Canvas</title>
+	<style>
+        body{
+            font-family: sans-serif;
+        }
+	
+        button{
+            font-size:1.2em;
+        }
+	
+        section{
+            margin:.5em 0 .5em 0;
+        }
+	
+        canvas{
+		    border:1px solid gray;
+	    }
+	</style>
+	<script>
+		// #0 - in this class we will always use ECMAScript 5's "strict" mode
+		// See what 'use strict' does here:
+		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode
+		"use strict";
+		
+		// #1 call the `init` function after the pages loads
+		window.onload = init;
+        let paused = false;
+
+		function init(){
+            console.log("page loaded!");
+            setupUI();
+            
+			let canvas = document.querySelector("canvas");
+			let can = canvas.getContext("2d");
+
+			function animate() {
+			requestAnimationFrame(animate);
+            if (!paused){
+                drawRandomRect();
+            }
+			}
+
+			function drawRandomRect() {
+			can.fillStyle = `${getRandomColor()}`;
+			can.beginPath();
+			let x = getRandomInt(1,500);
+			let y = getRandomInt(0,480);
+			let w = getRandomInt(10,200);
+			let h = getRandomInt(10,200);
+			can.fillRect(x,y,w,h);
+			}
+
+            function drawRandomRect2(x,y){
+                can.fillStyle = "red";
+                for (let i = 0; i < 10; i++)
+                {
+                    can.fillRect(
+                        (x + getRandomInt(-30,30)),
+                        (y + getRandomInt(-30,30)),
+                        10,10
+                        );
+                }
+            }
+
+            function canvasClicked(e){
+            let rect = e.target.getBoundingClientRect();
+            let mouseX = e.clientX - rect.x;
+            let mouseY = e.clientY - rect.y;
+            drawRandomRect2(mouseX,mouseY);
+            }
+            
+            function setupUI(){
+            let pauseBtn = document.querySelector("#btnPause");
+            let playBtn = document.querySelector("#btnPlay");
+            let canvasBtn = document.querySelector("canvas");
+
+            pauseBtn.addEventListener("click", ()=> paused = true);
+            playBtn.addEventListener("click", ()=> paused = false);
+            canvasBtn.addEventListener("click",canvasClicked);
+        }
+
+			animate();
+		}
+
+        // I don't really understand what you're asking of me for the draw rectangles section and I can't get the videos to load on the pages in order to get a better idea of what to do. 
+
+		// handy helper functions!
+		function getRandomColor(){
+  		function getByte(){
+    	return 55 + Math.round(Math.random() * 200);
+  		}
+  		return "rgba(" + getByte() + "," + getByte() + "," + getByte() + ",.8)";
+		}
+
+		function getRandomInt(min, max) {
+  		return Math.floor(Math.random() * (max - min + 1)) + min;
+		}
+
+	</script>
+</head>
+<body>
+	<canvas width="640" height="480">
+		Get a real browser!
+	</canvas>
+    <section>
+        <button id="btnPlay">Play</button>
+        <button id="btnPause">Pause</button>
+      </section>
+      <section>
+        <span>
+          <input type="checkbox" id="cbRectangles" checked>
+          <label for="cbRectangles">Rectangles</label>
+        </span>
+      </section>
+      <section>
+        <p>Click on the screen to "spraypaint" rectangles (you probably want the screensaver to be paused)</p>
+      </section>
+</body>
+</html>

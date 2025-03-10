@@ -1,0 +1,5 @@
+II: I used the biquadFilters of type highpass, lowpass and allpass each are pretty self explanatory.
+III: I was unable to implement a sprite class as I was out when it was demoed and spent a very long time trying to figure it out. It would've been a cloud that arcs around in a circle and scales to the rhythm and thunderbolts that shoot out every once in a while.
+IV: I just put the required and instructions and had them load in the title and instructions at the bottom of the page.
+V: I think a put a lot into making the gradient and bars look unique, I wanted to look like a sunset or kind of 90s vector graphics kind of deal. I also made these cool cloud spot-light things? Basically a projection effect with flickering!
+Other than that it does look a lot like the normal AV I guess. So I'd give myself a 5. I did put in some effort I just couldn't get it to work and this is what I had in the time and I personally think that I did a somewhat good job.

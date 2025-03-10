@@ -1,0 +1,5 @@
+{
+    "title": "Jonathan Luke Audio Visualizer",
+    "audio-names": ["New Adventure Theme","Peanuts Theme","The Picard Song"],
+    "instructions": "Select a song and press play, you can choose different filters to reduce the high or low parts of the song!"
+}

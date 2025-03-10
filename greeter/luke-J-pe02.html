@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Greeter</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-size: 1.5em;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+
+        label {
+            font-size: 16pt;
+        }
+
+        button {
+            height: 50px;
+            width: 150px;
+            font-size: 14pt;
+        }
+    </style>
+    <script>
+        "use strict";
+
+        const greet = (greeting) => {
+            const shoutBtn = document.querySelector("#shout").checked;
+            let firstName = document.querySelector("#input-firstname").value;
+            const lastName = document.querySelector("#input-lastname").value;
+            if (!firstName.trim()) firstName = "Peter";
+           
+            document.querySelector("#output").innerHTML = `${greeting} ${firstName} ${lastName}!`
+            if (shoutBtn) 
+            {
+                document.querySelector("#output").innerHTML = document.querySelector("#output").innerHTML.toUpperCase();
+            }
+        };
+
+        const init = () => {
+            const button = document.querySelector("button");
+            const button2 = document.querySelector("#btn-Click2");
+        
+            button.addEventListener("click", () => {greet("Hello")});
+            button2.addEventListener("click", () => {greet("Bye")});
+
+            document.querySelector("#output").style.color = "red";
+            document.querySelector("#output").style.backgroundColor = "yellow";
+        };
+
+        window.onload = init;
+    </script>
+</head>
+
+<body>
+    <input type="checkbox" id="shout">
+    <label for="shout">Shoutify!</label>
+    <div id="buttons">
+        <button>Hi!</button>
+        <button id="btn-Click2">Bye!</button>
+    </div>
+    <input id="input-firstname" placeholder="Type in your first name">
+    <input id="input-lastname" placeholder="Type in your last name">
+    <p id="output">???</p>
+
+
+</body>
+</html>
