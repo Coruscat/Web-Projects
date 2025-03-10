@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Next Gen 2.0</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="../dist/bundle.js"></script>
+</head>
+
+<body>
+    <nav class="navbar has-shadow is-light">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="home.html">
+            <i class="fas fa-home"></i>
+          </a>
+          <a class="navbar-burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </div>
+      
+    
+      <div class="navbar-menu" id="nav-links">
+          <div class="navbar-start">
+            <a class="navbar-item is-hoverable" href="./home.html">
+              Home
+            </a>
+          
+            <a class="navbar-item">
+              App
+            </a>
+          </div> <!-- end navbar-start -->
+        </div>
+      </div>
+    </nav>
+
+    <section class="section has-background-info">
+        <h1 class="title has-text-white is-size-1">Watch Next Generator</h1>
+        <p id="warning" class="title has-text-white is-size-5">Please enter a Japanese title for best results, full titles work best (careful of spelling mistakes)</p>
+        <div id="filters" class="section">
+        <p class="title has-text-white">Enter a Title You Have Seen:</p>
+        <input id="searchbox" onkeypress="return enter(event)" class="input is-normal mb-3">
+        <p class="title has-text-white is-size-3">Sort By:</p>
+        <p class="title has-text-white is-size-6">Airing:</p>
+        <input id="airing" type="checkbox" >
+        <p class="title has-text-white is-size-6">Score:</p>
+        <select id="score">
+            <option value="highest" selected>Highest</option>
+            <option value="lowest">Lowest</option>
+        </select>
+        <p class="title has-text-white is-size-6">Results:</p>
+        <input type="number" id="resultsLength" value="10" min="1" max="15" >
+        <button id="searchbutton">search</button>
+        </div>
+        <div id="results">
+        </div>
+    </section>
+    
+</body>
+</html>

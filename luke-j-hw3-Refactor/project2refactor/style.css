@@ -1,0 +1,100 @@
+@font-face {
+    font-family: sono;
+    src: url('../project2/Font/static/Sono/Sono-Regular.ttf');
+}
+
+@font-face {
+    font-family: sonoBold;
+    src: url('../project2/Font/static/Sono/Sono-Bold.ttf');
+}
+
+h1 {
+    font-family: sonoBold;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+#warning {
+    font-family: sono;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    background-color: #7698B3;
+    color: white;
+}
+
+button {
+    background-color: white;
+    font-family: sono;
+}
+
+#filters {
+    font-family: sono;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+ 
+#filters *{
+    margin: 5px;
+}
+
+#results {
+    margin-top: 5px;
+}
+
+#results *{
+    margin:5px;
+}
+
+#results p{
+    font-family: sono;
+margin-left: 20px;
+font-size: 1.2rem;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #726E97;
+}
+
+a {
+    font-family: sono;
+}
+
+a:link {
+    color:azure;
+    font-size: 1.5rem;
+}
+
+a:visited {
+    color: #D3D3D3;
+}
+
+a:hover {
+    color:white;
+}
+
+a:active {
+    color:aquamarine;
+}
+
+@media screen and (min-width:1000px){
+    
+    .result {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #726E97;
+    }
+
+    #filters{
+    flex-direction: row;
+    }
+}

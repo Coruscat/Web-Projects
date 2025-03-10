@@ -1,0 +1,3 @@
+I've retooled my project 2 just with bulma, everything is still ES6 and I've just cleaned it up and anded the bulma for now.
+I added extra html and click events for the bulma elements that are dynamically created by the code
+I've used babel and made the file into ES5 and it definetly does not look pretty but it does work. 

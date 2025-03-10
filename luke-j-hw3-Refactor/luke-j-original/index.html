@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Reccs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script src="main.js"></script>
+<body>
+    <h1>Watch Next Generator</h1>
+    <p id="warning">Please enter a Japanese title for best results, full titles work best (careful of spelling mistakes)</p>
+    <div id="filters">
+    <p>Title:</p>
+    <input id="searchbox" onkeypress="return enter(event)">
+    <p>Sort By:</p>
+    <p>Airing:</p>
+    <input id="airing" type="checkbox" >
+    <p>Score:</p>
+    <select id="score">
+        <option value="highest" selected>Highest</option>
+        <option value="lowest">Lowest</option>
+    </select>
+    <p>Results:</p>
+    <input type="number" id="resultsLength" value="10" min="1" max="15" >
+    <button id="searchbutton">search</button>
+    </div>
+    <div id="results">
+    </div>
+</body>
+</html>
