@@ -1,0 +1,8 @@
+I am now finally done with project2! 
+So the site can be a bit slow because I'm really trying to avoid the rate limiting from the free version of the api...
+so just do as the website says and be patient. And also I'm relying on recommendations being there in the first place,
+if there is a movie it sometimes picks that for a series(so basically naruto doesn't work :P) but other than that it should work
+if you're looking for an anime to write and don't know any here you go: Bleach, Cowboy Bebop, Kimetsu no Yaiba, Jujustu Kaisen
+and then maybe just grab the titles from the results to prove I didn't hard code ig...
+Throughout the entire process I only looked up the syntax for fetch on w3schools. 
+I got my font on google fonts and the open license is in the project folder

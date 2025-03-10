@@ -1,0 +1,47 @@
+@font-face {
+    font-family: sono;
+    src: url('../project3/font/static/Sono/Sono-Regular.ttf');
+}
+
+@font-face {
+    font-family: sonoBold;
+    src: url('../project3/font/static/Sono/Sono-Bold.ttf');
+}
+
+body {
+    background-color: #7698B3;
+    color: white;
+}
+
+h1 {
+    font-family: sonoBold;
+    font-size: 5rem;
+}
+
+h2 {
+    font-family: sonoBold;
+    font-size: 3rem;
+}
+
+p {
+    font-family: sono;
+    font-size: 2rem;
+}
+
+.bold {
+    font-family: sonoBold;
+}
+
+#Blurb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#pixi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
